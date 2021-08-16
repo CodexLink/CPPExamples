@@ -52,12 +52,14 @@ int main()
 
     delete &cCat;
 
+
     Base = &dDog;
+
     RunFunction(Base);
 
     delete &dDog;
+
     Base = &bBasic;
     RunFunction(Base);
-
     return 0;
 }
