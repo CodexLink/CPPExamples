@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"3XHS":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),c=a.n(n),l=a("LbRr");t.default=function(){return c.a.createElement("div",{className:"test",style:{color:"teal"}},c.a.createElement(l.a,{siteTitle:"About Janrey Licas"}),c.a.createElement("h1",null,"About Gatsby"),c.a.createElement("p",null,"Such wow. Very React."))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-3f3bbf61546e1adef1d5.js.map

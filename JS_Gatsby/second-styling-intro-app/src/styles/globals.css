@@ -1,0 +1,9 @@
+/* ! We define some basic CSS Styling... */
+
+/* ! Usually this is common and one way to implement
+! a CSS to a page. But in this tutorial. We're trying to
+! do the component-scoped CSS.
+*/
+html {
+    background-color: lavenderblush;
+}

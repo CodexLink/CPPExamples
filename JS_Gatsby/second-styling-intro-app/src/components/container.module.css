@@ -1,0 +1,14 @@
+/*
+    ! This is the file that container.jsx currently being referenced at.
+    ! As per gatsby says:
+        * You’ll notice that the file name ends with .module.css instead of the usual .css.
+        * This is how you tell Gatsby that this CSS file should be processed as a CSS module
+        * rather than plain CSS.
+
+    ! TL;DR: We're declaring this stylesheet as a CSS module for Gatsby. To be used by an JSX Component.
+*/
+
+.container {
+    margin: 3rem auto;
+    max-width: 600px;
+}
