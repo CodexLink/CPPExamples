@@ -1,17 +1,7 @@
-<h1 align="center">OpenCV Python Application Archives</h1>
-<h4 align="center">A set of Python Applications with OpenCV-Python, NumPy and potentially matplotlib, to be archived during Modular Group 3 Semester Progression of CPE102 - Machine Perception.
+# OpenCV Python Application Archives [![Repository License](https://img.shields.io/badge/Repo%20License-MIT-blueviolet)](https://github.com/CodexLink/discord-rich-presence-activity-badge/blob/main/LICENSE)
+#### A set of Python Applications with OpenCV-Python, NumPy and potentially matplotlib, to be archived during Modular Group 3 Semester Progression of CPE102 - Machine Perception.
 
-<br>Archived for **Post**-Educational Purposes.
-
-</h4>
-
-<div align="center">
-
-![Codacy Grade](https://img.shields.io/codacy/grade/946158dd205b4e86b0f9cb39563d3912?label=Codacy%20Grade&logo=codacy)
-[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/CodexLink/opencv_python_archives?label=CodeFactor%20Grade&logo=codefactor)](https://www.codefactor.io/repository/github/codexlink/opencv_python_archives)
-[![Repository License](https://img.shields.io/badge/Repo%20License-MIT-blueviolet)](https://github.com/CodexLink/discord-rich-presence-activity-badge/blob/main/LICENSE)
-
-</div>
+Archived for **Post**-Educational Purposes. 
 
 ## Welcome
 
