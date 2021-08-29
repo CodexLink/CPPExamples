@@ -1,0 +1,18 @@
+<html>
+
+<ol id="todo-list-app">
+	<!-- Step 4 Create a List Element | No need to use div tag since we can use `ol` tag instead. -->
+	<todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+		<!-- From createApp.component -->
+		<!-- v-for component unpacks data.groceryList in an item. -->
+		<!-- v-bind component binds iterated object "item" to "todo" property declared in app.component instance. -->
+		<!-- v-bind component binds iterated object "item" property "id" to the "key" property dedicated for li tag. -->
+	</todo-item>
+</ol>
+
+<script src="https://unpkg.com/vue@next"></script> <!-- Personal Preference. -->
+<script src="./main.js"></script>
+
+</html>
+
+<!-- ! The section of this tutorial is incomplete. The documentation only explains some concepts. -->

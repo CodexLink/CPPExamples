@@ -1,0 +1,48 @@
+<html>
+
+<!-- The demo has a css. We should inline it instead. -->
+<style>
+	.demo {
+		font-family: sans-serif;
+		border: 1px solid #eee;
+		border-radius: 2px;
+		padding: 20px 30px;
+		margin-top: 1em;
+		margin-bottom: 40px;
+		user-select: none;
+		overflow-x: auto;
+	}
+</style>
+
+<div id="example1" class="demo">
+	<p>Using mustaches: {{ rawHtml }}</p> <!-- This is called mustache syntax. (Double Curly Braces) -->
+	<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+	<!-- * Rendering Raw HTML should be done in v-html directive. Because displaying them with mustache doesn't work. -->
+
+	<p id="{{ dynamicId }}">ID as mustaches. See the Inspect Element</p>
+	<p v-bind:id="dynamicId">Using v-bind directive: See the Inspect Element</p>
+
+	<!-- Javascript Expressions + Property Enabling by v-bind directive. -->
+	<button v-bind:disabled="isButtonDisabled">Button is {{ isButtonDisabled ? "Disabled" : "Enabled" }}</button>
+
+	<p v-if="isButtonDisabled">Button is Disabled, you should see this content.</p>
+
+	<!-- Property and Function Binding -->
+	<hr />
+	<a v-bind:href="githubUrl">Get to my Profile.</a> <!-- : as v-bind is allowed.-->
+	<br>
+	<br>
+	<a v-on:click="changeButtonState">Press this Line to Change State of Button | Currently: {{ isButtonDisabled ?
+		"Disabled" :
+		"Enabled" }}</a> <!-- @ as v-on is allowed.-->
+	<hr />
+
+	<!-- Capital Letters on Dynamic Arguments is not allowed!!! -->
+	<a v-on:[dynamicptr]="dynamicFunction">Dynamic action received a value of {{dynamicFunction_Receive }} </a>
+
+</div>
+
+<script src="https://unpkg.com/vue@next"></script> <!-- Using `next` version for learning purposes. -->
+<script src="./main.js"></script>
+
+</html>

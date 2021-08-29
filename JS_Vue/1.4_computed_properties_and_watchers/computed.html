@@ -1,0 +1,30 @@
+<html>
+
+<div id="computed-basics">
+	<p>Has published books:</p>
+
+	<!-- * Contexts like this should be in the backend and not in frontend! -->
+	<!-- # Use `computed` property for reactive and non-declarative approach -->
+	<span>Frontend Processor > {{ author.books.length > 0 ? 'Yes' : 'No' }}</span>
+	<br />
+	<!-- Invokation of () inside of mustache is also possible, but that would disregard reactiveness. -->
+	<span>Backend Processor > {{ isBooksExists }} </span>
+	<br />
+	<br />
+
+	<!-- ! Try changing the author's name and it will change. -->
+	<ol>
+		<li v-for="eachBooks in author.books">{{ author_name }} -> {{ eachBooks }}</li>
+	</ol>
+	<hr />
+	<span>{{ dateNow }}</span>
+
+</div>
+
+
+<script src="https://unpkg.com/vue@next"></script> <!-- Using `next` version for learning purposes. -->
+<script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+
+<script src="./computed.js"></script>
+
+</html>

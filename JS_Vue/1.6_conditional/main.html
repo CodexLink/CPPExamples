@@ -1,0 +1,35 @@
+<!DOCTYPE html5>
+<html>
+
+<div id="conditional-render">
+	<h1 v-if="awesome">Vue is awesome!</h1>
+	<h1 v-else>Oh no 😢</h1>
+	<h1 v-show="shouldHello">Hello!</h1>
+	<span v-if="integerToCompare > 0">Given integer is positive.</span>
+	<span v-else-if="integerToCompare < 0">Given integer is negative.</span>
+	<span v-else>Comparisons weren't triggered because its not truthy.</span>
+
+</div>
+
+<script src="https://unpkg.com/vue@next"></script> <!-- Using `next` version for learning purposes. -->
+
+<script>
+	Vue.createApp({
+		data() {
+			return {
+				awesome: true,
+				shouldHello: true,
+				integerToCompare: 0
+			}
+		}
+	}).mount("#conditional-render")
+
+	console.log("Inline Operations Done.")
+
+</script>
+
+</html>
+
+<!-- # v-if is better for destroying components that is not truthy. -->
+<!-- # it is also lazy, initialize a component when it goes truthy, or otherwise. -->
+<!-- # v-show is basically, render it but hide it or not depends on the condition. -->

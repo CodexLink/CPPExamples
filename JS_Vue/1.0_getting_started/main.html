@@ -1,0 +1,56 @@
+<html>
+
+<!-- Step 1-->
+<div id="counter">
+  Counter: {{ counter }}
+</div>
+
+<hr />
+
+<!-- Step 3 | Added Button to Bind Stop Function from Counter from Counting -->
+<div id="bind-attribute">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds to see my dynamically bound
+    title!
+  </span>
+</div>
+
+<hr />
+
+<!-- Step 4 | Handling User Input -->
+<div id="event-handling">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+<hr />
+
+<!-- Step 5 | Two Way Binding, using v-model -->
+<!-- What happens here is that, we make our input `message` reflect to the output of `p` tag. Which shows two-way mechanism. -->
+<!-- You input something, it will be displayed. -->
+<div id="two-way-binding">
+  <p>{{message}}</p>
+  <input v-model="message" />
+</div>
+
+<hr />
+
+<!-- Step 6 | Conditional with Motification -->
+<div id="conditional-rendering">
+  <span v-if="seen">{{ seen_message }}</span>
+</div>
+
+
+<!-- Step 7 | Looping -->
+<div id="list-rendering">
+  <ol>
+    <li v-for="todo in todos"> <!-- Iterator -->
+      {{ todo.text }} <!-- Unpack the object (list in this tutorial) here. -->
+    </li>
+  </ol>
+</div>
+
+<script src="https://unpkg.com/vue@next"></script> <!-- Using `next` version for learning purposes. -->
+<script src="./main.js"></script>
+
+</html>

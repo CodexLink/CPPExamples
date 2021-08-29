@@ -1,0 +1,30 @@
+<html>
+<!-- # This works for custom components, and invoking styles with dictionary styles!!! -->
+<!-- Added Styles to better distinguish changes based from classes applied. -->
+<style>
+	.rendered {
+		color: brown;
+	}
+
+	.elementActivated {
+		color: teal;
+	}
+
+	.rendered.elementActivated {
+		color: yellow;
+		background-color: black;
+	}
+</style>
+
+<div id="cls_example">
+	<!-- * <div :class="{ rendered: shouldRender, elementActivated: isElementActive }"> This is inlined, we can do better via computed property.-->
+	<div :class="init_cls">
+	<!-- We can also use [] (array) to activate certain elements, but its best to do it in the backend side. -->
+		Inspect the console for more information about this demo.
+	</div>
+</div>
+
+<script src="https://unpkg.com/vue@next"></script> <!-- Using `next` version for learning purposes. -->
+<script src="./main.js"></script>
+
+</html>
