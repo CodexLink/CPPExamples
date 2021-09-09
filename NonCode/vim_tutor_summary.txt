@@ -1,0 +1,126 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+* VIM Tutor Summarized by CodexLink (https://github.com/CodexLink)
+! All commands are case-sensitive.
+# Created on ‎2 ‎June ‎2021
+Added on Gists (https://gist.github.com/CodexLink/a9819cf95541f82c5216488ab30dd8b2) on September 09, 2021.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+=== Direction ===
+h — Move Left.
+j — Move Down.
+k — Move Up.
+l — Move Right.
+
+=== Modes === (Contains correlation from Data Modification)
+
+v — Visual Mode / Visual Block Mode.
+a — Append Mode (Commonly Invoked as Insert Mode)
+A — Append to the end of the line. (Normarlly, Shift+A)
+i — Insert Mode
+I — Insert to the start of the line. (Normarlly, Shift+I)
+R — Replace Mode (See Data Modification)
+
+=== Quitting, Overriding, Merging and Saving in VIM ===
+
+:q! — Quit with Override by Not Saving Changes.
+:wq — Quit with Changes Saved.
+:w <filename> — Save new file or write whole changes to a new filename.
+:[start],[bottom] w <filename> — Selective save changes to a new filename.
+:r <filename> — Merges the <filename> content under your current file in the same place where the cursor is placed.
+
+Notes:
+- With ! invoked, that means force or override it.
+
+=== Data Modification ===
+
+i — Insert a text on a current spot of the cursor.
+a — Insert a text after one character text.
+x — Delete a character under the cursor from RIGHT to LEFT.
+X — Delete a character under the cursor from LEFT to RIGHT.
+p — Put the last deleted data or paste the yanked (copied) data.
+#p — Puts the last deleted data for # (where # is a number) times, from cursor to bottom.
+r — Replace a character under cursor.
+R — Replaces everything as you type under your cursor. (Overtype Mode)
+o — Open Mode, adds new line under your current cursor and goes into Insert Mode.
+O — Open Mode, but adds new line above of your current cursor.
+
+=== Extended Deletion ===
+dw — Delete from the cursor to the END OF THE WORD including a space.
+d$ — Delete from the cursor to the END OF THE LINE.
+de — Delete from the cursor to the END OF THE WORD excluding a space.
+dd — Delete the whole line from where the cursor is placed.
+#dd or #D — Deletes # of lines from cursor to bottom.
+
+== Extended Change ===
+cw — Changes the word from where the cursor is focused.
+c$ — Changes the whole line from the word that the cursor is focused.
+C — Shortcut to cw.
+
+Notes:
+- This will also put you under insert mode.
+- So basically, it deletes via dw or dw and then append.
+- I'm not sure if ce would work on this one. Please do tests later.
+
+=== Extension of Extra Commands ===
+The following is possible or acceptable:
+1. [command] [number] [object / command] — d2w, deleted 2 word.
+2. [number] [commnd] [object / command] — 2dw, deletes 2 word.
+
+The format is compatible with the following commands:
+d — Deletion
+c — Change
+
+=== Redo and Undo ===
+u — Undo the last performed command/s
+U — Undo the commands performed from where cursor was focused (on lines).
+Ctrl + R — Redo the certain actions (i.e undos, last type and etc.)
+
+=== Quick Navigation and File Status ===
+gg — Moves your cursor to the top of the file.
+Ctrl + G — Shows your current file's name, total lines and navigation percentage.
+[number] Shift+G — Moves your cursor to the bottom of the file.
+                 — With number invoked, moves to nth row of the file.
+[number]| — Moves to nth column of the current row.
+
+=== Searching and Matching ===
+
+/[words-to-search] — Search from top to bottom (forward) w/o case sensitive.
+?[words-to-search] — Search in reverse from bottom to top or backtrack on candidate query.
+n — Run through the matches from top to bottom. (Sets prefix to /, if changed)
+Shift + n or N — Run through the matches from bottom to top. (Sets prefix to ?, if changed)
+[focus on parenthesis] then % — Transfer to matching opposite bracket or parenthesis. Useful for debugging.
+% (to certain parenthesis, bracket and any other pair) — moves cursor to another pair.
+
+
+=== Changing Data from Old to New + Parameter ===
+:[prefix]s/old/new/[param] — Search and replace the old data to new data, on one occurence.
+
+With prefix:
+% — Changes all matched strings to the whole file. (For all occurrence)
+#,# — Change all matched strings from Line A to Line B occurrences.
+
+With param:
+g — Apply changes only on this certain focused line.
+c — Ask for confirmation before applying changes.
+
+=== External Execution ===
+! — Prefix after : to execute something from the terminal.
+
+Example:
+:!dir -> Outputs current file directory under your screen.
+:!ls -> Similar to ls but less information.
+:!del <filename> -> removes a file while in VIM session.
+
+=== Options for NeoVIM or VIM ===
+:set ic — Enables ignore case in '/' search for pattern.
+:set hlsearch — Enables highlighting on matched cases.
+:set incsearch — Enables highlighting even on typing the pattern. (incomplete querying)
+
+Notes:
+You can combine set of commands for setting them to on or enable.
+
+=== Help Command ===
+
+:help <anything_else>
+
+Anything that is advanced were not included here since this gists is focused on summarizing the Tutorial Version.
