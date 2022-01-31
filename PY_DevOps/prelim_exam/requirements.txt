@@ -1,0 +1,5 @@
+django
+coveralls
+pandas
+flask
+
