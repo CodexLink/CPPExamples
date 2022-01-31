@@ -1,12 +1,14 @@
-# Stashed Codes
+# Code Storage
 
-This repository contains everything that I have done from various projects. They exist to test certain functionalities and discovering some new stuff. Some of these were done because of my deliverables. Feel free to use them, however, **do not hold me responsible/accountable** for anything that you may have done.
+A repository that contains everything that I have done and fetched from examples to potential prototypes. They exist on this repository to test certain functionalities and discovering some new stuff that I haven't known. Feel free to use them, however, **do not hold me responsible/accountable** for anything that you may have done. See [LICENSE](https://github.com/CodexLink/CodeStorage/blob/latest/LICENSE) for more information.
 
-## Some Resources
+> Note that, some folders do have README inside it. They may contain references from the source code that I pulled. If I do miss out, make an ISSUE or PR so that I can address it. Thank you.
 
-Most of these works were have their repository. But I merged them at the time of this writing.
+## Imports
 
-### For JS [Gatsby, Node, and React]
+Most of the folders here do have their own repository. Though because of repository pollution, I have to merge them.
+
+### Notes: For JS [Gatsby, Node, and React]
 
 - For Node.js: https://www.youtube.com/watch?v=TlB_eWDSMt4
 - For React.js: https://www.youtube.com/watch?v=Ke90Tje7VS0 and [Create React App](https://create-react-app.dev/)
